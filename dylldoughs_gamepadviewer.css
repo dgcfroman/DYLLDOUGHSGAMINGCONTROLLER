@@ -1,0 +1,375 @@
+/*
+ DYLLDOUGHS GAMING — Gamepad Viewer Custom Skin
+ Designed for Gamepad Viewer custom CSS (?css=...)
+ Xbox-style layout
+ Neon cyan / hot pink / electric green
+*/
+
+.controller.custom {
+  position: relative;
+  width: 784px;
+  height: 558px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 24% 30%, rgba(0,229,255,.28), transparent 25%),
+    radial-gradient(circle at 78% 34%, rgba(255,0,200,.25), transparent 27%),
+    linear-gradient(135deg, #070812 0%, #111326 48%, #080911 100%);
+  border: 3px solid #00e5ff;
+  border-radius: 170px 170px 135px 135px / 115px 115px 145px 145px;
+  box-shadow:
+    0 0 10px #00e5ff,
+    0 0 28px rgba(0,229,255,.75),
+    0 0 55px rgba(255,0,200,.38),
+    inset 0 0 35px rgba(0,229,255,.12);
+  overflow: visible;
+}
+
+/* Decorative neon rim */
+.controller.custom::before {
+  content: "DYLLDOUGHS GAMING";
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  transform: translateX(-50%);
+  z-index: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-shadow:
+    0 0 5px #00e5ff,
+    0 0 12px #00e5ff,
+    0 0 20px #ff00cc;
+  pointer-events: none;
+}
+
+.controller.custom::after {
+  content: "TOXIC BUT FAMILY";
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 0;
+  color: #00e5ff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-shadow: 0 0 9px #00e5ff;
+  pointer-events: none;
+}
+
+/* Keep functional elements above decoration */
+.controller.custom > div {
+  z-index: 2;
+}
+
+/* Triggers */
+.custom .triggers {
+  position: absolute;
+  left: 92px;
+  top: 67px;
+  width: 600px;
+  height: 78px;
+}
+
+.custom .trigger {
+  width: 96px;
+  height: 70px;
+  box-sizing: border-box;
+  border: 3px solid #202335;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #171a2b, #080a13);
+  box-shadow:
+    inset 0 0 12px rgba(0,229,255,.12),
+    0 0 7px rgba(0,0,0,.8);
+  opacity: .78;
+}
+
+.custom .trigger.left { float: left; }
+.custom .trigger.right { float: right; }
+
+.custom .trigger.pressed {
+  opacity: 1;
+  border-color: #00e5ff;
+  background: linear-gradient(145deg, #00e5ff, #087dff);
+  box-shadow:
+    0 0 8px #00e5ff,
+    0 0 22px #00e5ff,
+    inset 0 0 12px rgba(255,255,255,.5);
+}
+
+/* Bumpers */
+.custom .bumpers {
+  position: absolute;
+  left: 92px;
+  top: 127px;
+  width: 600px;
+  height: 36px;
+}
+
+.custom .bumper {
+  width: 108px;
+  height: 31px;
+  box-sizing: border-box;
+  border: 3px solid #25283a;
+  border-radius: 13px;
+  background: linear-gradient(180deg, #191c2d, #090b13);
+  box-shadow: inset 0 0 10px rgba(255,0,204,.10);
+  opacity: .82;
+}
+
+.custom .bumper.left { float: left; }
+.custom .bumper.right { float: right; }
+
+.custom .bumper.pressed {
+  opacity: 1;
+  border-color: #ff00cc;
+  background: linear-gradient(180deg, #ff00cc, #8c00ff);
+  box-shadow:
+    0 0 8px #ff00cc,
+    0 0 20px rgba(255,0,204,.9),
+    inset 0 0 10px rgba(255,255,255,.35);
+}
+
+/* Menu / View / Start */
+.custom .arrows {
+  position: absolute;
+  left: 330px;
+  top: 151px;
+  width: 124px;
+  height: 34px;
+}
+
+.custom .back,
+.custom .start {
+  width: 46px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 2px solid #00e5ff;
+  border-radius: 10px;
+  background: #0d1020;
+  box-shadow: 0 0 7px rgba(0,229,255,.55);
+}
+
+.custom .back { float: left; }
+.custom .start { float: right; }
+
+.custom .back::after {
+  content: "VIEW";
+}
+.custom .start::after {
+  content: "MENU";
+}
+
+.custom .back::after,
+.custom .start::after {
+  display: block;
+  color: #ffffff;
+  font: 900 8px/24px Arial, Helvetica, sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.custom .back.pressed,
+.custom .start.pressed {
+  background: #00e5ff;
+  color: #050711;
+  box-shadow: 0 0 12px #00e5ff, 0 0 22px #00e5ff;
+}
+
+/* Player quadrant */
+.custom .quadrant {
+  position: absolute;
+  left: 369px;
+  top: 104px;
+  width: 46px;
+  height: 22px;
+  border-radius: 8px;
+  background: #101322;
+  border: 2px solid #00e5ff;
+  box-shadow: 0 0 8px #00e5ff;
+}
+
+.custom .quadrant.p0 { background-color: #00e5ff; }
+.custom .quadrant.p1 { background-color: #ff00cc; }
+.custom .quadrant.p2 { background-color: #39ff14; }
+.custom .quadrant.p3 { background-color: #ffe600; }
+
+/* Face buttons */
+.custom .abxy {
+  position: absolute;
+  left: 515px;
+  top: 190px;
+  width: 205px;
+  height: 205px;
+}
+
+.custom .button {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 3px solid #25283a;
+  background: radial-gradient(circle at 35% 30%, #252a3f, #080a12 70%);
+  box-shadow:
+    inset 0 0 9px rgba(255,255,255,.06),
+    0 0 7px rgba(0,0,0,.9);
+  color: transparent;
+}
+
+.custom .button::after {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  font: 900 22px/52px Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: 0 0 5px currentColor;
+}
+
+.custom .a { left: 73px; top: 142px; border-color: #39ff14; }
+.custom .a::after { content: "A"; color: #39ff14; }
+.custom .b { right: 0; top: 72px; border-color: #ff3030; }
+.custom .b::after { content: "B"; color: #ff3030; }
+.custom .x { left: 0; top: 72px; border-color: #00e5ff; }
+.custom .x::after { content: "X"; color: #00e5ff; }
+.custom .y { left: 73px; top: 0; border-color: #ffe600; }
+.custom .y::after { content: "Y"; color: #ffe600; }
+
+.custom .button.pressed {
+  transform: translateY(4px) scale(.96);
+  background: radial-gradient(circle, #ffffff 0%, currentColor 22%, #101322 78%);
+  box-shadow:
+    0 0 10px currentColor,
+    0 0 25px currentColor,
+    inset 0 0 10px rgba(255,255,255,.8);
+}
+
+/* Analog sticks */
+.custom .sticks {
+  position: absolute;
+  left: 180px;
+  top: 205px;
+  width: 310px;
+  height: 205px;
+}
+
+.custom .stick {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 5px solid #1f2334;
+  background: radial-gradient(circle at 38% 35%, #343a50, #0a0c14 68%);
+  box-shadow:
+    0 0 0 3px #00e5ff,
+    0 0 12px rgba(0,229,255,.65),
+    inset 0 0 18px rgba(0,0,0,.95);
+}
+
+.custom .stick::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 28px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.2);
+  box-shadow: 0 0 10px rgba(255,255,255,.08);
+}
+
+.custom .stick.left {
+  left: 0;
+  top: 0;
+}
+
+.custom .stick.right {
+  right: 0;
+  bottom: 0;
+}
+
+.custom .stick.pressed {
+  border-color: #ff00cc;
+  box-shadow:
+    0 0 0 3px #ff00cc,
+    0 0 13px #ff00cc,
+    0 0 28px rgba(255,0,204,.8),
+    inset 0 0 18px rgba(0,0,0,.95);
+}
+
+/* D-pad */
+.custom .dpad {
+  position: absolute;
+  left: 72px;
+  top: 213px;
+  width: 145px;
+  height: 145px;
+}
+
+.custom .face {
+  position: absolute;
+  box-sizing: border-box;
+  background: #0a0c14;
+  border: 3px solid #25283a;
+  box-shadow: 0 0 8px rgba(0,229,255,.3);
+}
+
+.custom .face.up,
+.custom .face.down {
+  left: 51px;
+  width: 43px;
+  height: 58px;
+}
+
+.custom .face.left,
+.custom .face.right {
+  top: 51px;
+  width: 58px;
+  height: 43px;
+}
+
+.custom .face.up { top: 0; border-radius: 12px 12px 4px 4px; }
+.custom .face.down { bottom: 0; border-radius: 4px 4px 12px 12px; }
+.custom .face.left { left: 0; border-radius: 12px 4px 4px 12px; }
+.custom .face.right { right: 0; border-radius: 4px 12px 12px 4px; }
+
+.custom .face.pressed {
+  background: #ff00cc;
+  border-color: #ffffff;
+  box-shadow:
+    0 0 10px #ff00cc,
+    0 0 22px #ff00cc,
+    inset 0 0 8px rgba(255,255,255,.7);
+  transform: translateY(3px);
+}
+
+/* Trigger buttons for alternate controller mappings */
+.custom .trigger-button.left,
+.custom .trigger-button.right {
+  opacity: 0;
+}
+
+.custom .trigger-button.left.pressed,
+.custom .trigger-button.right.pressed {
+  opacity: 1;
+}
+
+/* Disconnected state */
+.custom.disconnected {
+  opacity: .55;
+}
+
+.custom.disconnected::before {
+  content: "DYLLDOUGHS GAMING • CONTROLLER DISCONNECTED";
+  color: #ff3030;
+  text-shadow: 0 0 8px #ff3030, 0 0 20px #ff3030;
+}
+
+.custom.disconnected div {
+  opacity: .18;
+}
