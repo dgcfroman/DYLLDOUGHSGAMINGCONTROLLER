@@ -1,0 +1,403 @@
+/*
+ DYLLDOUGHS GAMING
+ Gamepad Viewer CUSTOM skin
+ G7 PRO INSPIRED — WORKING BASE
+
+ Built around the classic Gamepad Viewer Xbox custom-skin DOM.
+ Do not add page/body positioning rules here.
+*/
+
+.controller.custom {
+    width: 784px;
+    height: 558px;
+    position: relative;
+
+    background:
+        radial-gradient(ellipse at 50% 34%, #30373e 0%, #181d22 38%, #0b0e12 72%, #050608 100%);
+
+    border: 3px solid #18e7f5;
+
+    /*
+      G7 Pro-inspired ergonomic shell:
+      broad shoulders, narrower center, rounded grips.
+    */
+    border-radius: 170px 170px 145px 145px / 125px 125px 205px 205px;
+
+    box-shadow:
+        0 0 0 2px rgba(255, 30, 180, .45),
+        0 0 18px rgba(0, 230, 255, .38),
+        0 0 42px rgba(255, 20, 180, .16),
+        inset 0 3px 8px rgba(255,255,255,.09),
+        inset 0 -30px 45px rgba(0,0,0,.55);
+
+    box-sizing: border-box;
+}
+
+/* Inner shell highlight */
+.controller.custom:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 160px 160px 135px 135px / 115px 115px 195px 195px;
+
+    pointer-events: none;
+}
+
+/* -------------------------------------------------------
+   TRIGGERS
+------------------------------------------------------- */
+
+.custom .triggers {
+    width: 586px;
+    height: 65px;
+    position: absolute;
+    left: 99px;
+    top: 0;
+}
+
+.custom .trigger {
+    width: 86px;
+    height: 65px;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(180deg, #424a52, #14181d);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 22px 22px 9px 9px;
+
+    box-shadow:
+        inset 0 3px 5px rgba(255,255,255,.08),
+        0 4px 10px rgba(0,0,0,.5);
+}
+
+.custom .trigger.left {
+    float: left;
+}
+
+.custom .trigger.right {
+    float: right;
+}
+
+.custom .trigger.pressed {
+    box-shadow:
+        0 0 18px rgba(0,230,255,.85),
+        inset 0 0 12px rgba(0,230,255,.2);
+}
+
+/* -------------------------------------------------------
+   BUMPERS
+------------------------------------------------------- */
+
+.custom .bumpers {
+    position: absolute;
+    width: 586px;
+    height: 28px;
+    left: 99px;
+    top: 72px;
+}
+
+.custom .bumper {
+    width: 89px;
+    height: 28px;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(180deg, #3c444b, #111519);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 8px;
+
+    box-shadow:
+        inset 0 2px 4px rgba(255,255,255,.07),
+        0 3px 8px rgba(0,0,0,.45);
+}
+
+.custom .bumper.left {
+    float: left;
+}
+
+.custom .bumper.right {
+    float: right;
+}
+
+.custom .bumper.pressed {
+    box-shadow:
+        0 0 16px rgba(255,30,180,.85),
+        inset 0 0 10px rgba(255,30,180,.22);
+}
+
+/* -------------------------------------------------------
+   PLAYER INDICATOR
+------------------------------------------------------- */
+
+.custom .quadrant {
+    position: absolute;
+
+    width: 111px;
+    height: 17px;
+
+    top: 140px;
+    left: 240px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0,230,255,.15),
+        rgba(0,230,255,.85),
+        rgba(255,30,180,.85),
+        rgba(255,30,180,.15)
+    );
+
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,230,255,.55);
+}
+
+.custom .p0 { opacity: 1; }
+.custom .p1 { opacity: .75; }
+.custom .p2 { opacity: .55; }
+.custom .p3 { opacity: .35; }
+
+/* -------------------------------------------------------
+   START / BACK
+------------------------------------------------------- */
+
+.custom .arrows {
+    position: absolute;
+
+    width: 205px;
+    height: 19px;
+
+    top: 250px;
+    left: 291px;
+}
+
+.custom .back,
+.custom .start {
+    width: 34px;
+    height: 19px;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(180deg,#3b4249,#111519);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 8px;
+
+    box-shadow: inset 0 2px 4px rgba(255,255,255,.06);
+}
+
+.custom .back {
+    float: left;
+    width: 38px;
+}
+
+.custom .start {
+    float: right;
+    width: 36px;
+}
+
+.custom .back.pressed,
+.custom .start.pressed {
+    box-shadow: 0 0 14px rgba(0,230,255,.8);
+}
+
+/* -------------------------------------------------------
+   FACE BUTTONS
+------------------------------------------------------- */
+
+.custom .abxy {
+    position: absolute;
+
+    width: 204px;
+    height: 205px;
+
+    top: 156px;
+    left: 538px;
+}
+
+.custom .button {
+    position: absolute;
+
+    width: 62px;
+    height: 62px;
+
+    box-sizing: border-box;
+
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.14);
+
+    box-shadow:
+        inset 0 5px 7px rgba(255,255,255,.14),
+        inset 0 -7px 10px rgba(0,0,0,.25),
+        0 5px 10px rgba(0,0,0,.55);
+}
+
+.custom .a {
+    top: 142px;
+    left: 71px;
+
+    background: radial-gradient(circle at 35% 28%, #70ff82, #12a944 70%, #08772f);
+}
+
+.custom .b {
+    top: 71px;
+    right: 0;
+
+    background: radial-gradient(circle at 35% 28%, #ff7474, #bf2738 70%, #801724);
+}
+
+.custom .x {
+    top: 71px;
+    left: 0;
+
+    background: radial-gradient(circle at 35% 28%, #61edff, #197dbd 70%, #0c4e78);
+}
+
+.custom .y {
+    left: 71px;
+    top: 0;
+
+    background: radial-gradient(circle at 35% 28%, #ffe86a, #d9901d 70%, #91600e);
+}
+
+.custom .button.pressed {
+    margin-top: 4px;
+    filter: brightness(1.3);
+
+    box-shadow:
+        0 0 18px rgba(0,230,255,.75),
+        0 0 30px rgba(255,30,180,.35),
+        inset 0 0 12px rgba(255,255,255,.22);
+}
+
+/* -------------------------------------------------------
+   ANALOG STICKS
+------------------------------------------------------- */
+
+.custom .sticks {
+    position: absolute;
+
+    width: 364px;
+    height: 105px;
+
+    top: 328px;
+    left: 210px;
+}
+
+.custom .stick {
+    position: absolute;
+
+    width: 105px;
+    height: 105px;
+
+    box-sizing: border-box;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 36% 28%, #525c65 0%, #30373e 35%, #111519 72%, #06080a 100%);
+
+    border: 4px solid #07090c;
+
+    box-shadow:
+        0 0 0 2px rgba(0,230,255,.38),
+        0 7px 14px rgba(0,0,0,.7),
+        inset 0 6px 10px rgba(255,255,255,.08);
+}
+
+.custom .stick.left {
+    top: 0;
+    left: 0;
+}
+
+.custom .stick.right {
+    top: 0;
+    left: 259px;
+}
+
+.custom .stick.pressed {
+    box-shadow:
+        0 0 0 2px rgba(255,30,180,.9),
+        0 0 23px rgba(255,30,180,.7),
+        inset 0 0 14px rgba(255,30,180,.2);
+}
+
+/* -------------------------------------------------------
+   D-PAD
+------------------------------------------------------- */
+
+.custom .dpad {
+    position: absolute;
+
+    width: 140px;
+    height: 132px;
+
+    top: 192px;
+    left: 74px;
+}
+
+.custom .face {
+    position: absolute;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(145deg,#414950,#101419);
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        inset 0 2px 4px rgba(255,255,255,.07),
+        0 5px 9px rgba(0,0,0,.55);
+}
+
+.custom .face.up,
+.custom .face.down {
+    width: 38px;
+    height: 52px;
+}
+
+.custom .face.left,
+.custom .face.right {
+    width: 52px;
+    height: 38px;
+}
+
+.custom .face.up {
+    left: 50px;
+    top: 0;
+    border-radius: 10px 10px 5px 5px;
+}
+
+.custom .face.down {
+    left: 50px;
+    top: 79px;
+    border-radius: 5px 5px 10px 10px;
+}
+
+.custom .face.left {
+    top: 47px;
+    left: 0;
+    border-radius: 10px 5px 5px 10px;
+}
+
+.custom .face.right {
+    top: 47px;
+    right: 0;
+    border-radius: 5px 10px 10px 5px;
+}
+
+.custom .face.pressed {
+    box-shadow:
+        0 0 17px rgba(0,230,255,.85),
+        inset 0 0 10px rgba(0,230,255,.2);
+}
+
+/* -------------------------------------------------------
+   DISCONNECTED
+------------------------------------------------------- */
+
+.custom.disconnected {
+    filter: brightness(.65);
+}
