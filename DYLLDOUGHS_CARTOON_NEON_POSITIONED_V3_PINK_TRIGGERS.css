@@ -1,0 +1,383 @@
+/*
+ DYLLDOUGHS GAMING — CUSTOM CARTOON NEON XBOX SKIN
+ For Gamepad Viewer: use with ?p=1&css=YOUR-CSS-URL
+ No external images required.
+*/
+
+.controller.custom {
+  position: relative;
+  width: 784px;
+  height: 558px;
+  margin: 0;
+  overflow: visible;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 28% 25%, rgba(0,229,255,.30), transparent 22%),
+    radial-gradient(circle at 73% 25%, rgba(255,0,204,.28), transparent 23%),
+    radial-gradient(circle at 50% 75%, rgba(57,255,20,.12), transparent 30%),
+    linear-gradient(145deg, #17192d 0%, #090a13 48%, #171025 100%);
+  border: 7px solid #00e5ff;
+  border-radius: 155px 155px 125px 125px / 115px 115px 145px 145px;
+  box-shadow:
+    0 0 0 4px #ff00cc,
+    0 0 14px #00e5ff,
+    0 0 35px rgba(0,229,255,.85),
+    0 0 65px rgba(255,0,204,.55),
+    inset 0 0 35px rgba(0,229,255,.16),
+    inset 0 0 65px rgba(255,0,204,.08);
+}
+
+/* cartoon paneling */
+.controller.custom:before {
+  content: "DYLLDOUGHS";
+  position: absolute;
+  left: 50%;
+  top: 37px;
+  transform: translateX(-50%) rotate(-1deg);
+  color: #fff;
+  font: 900 31px/1 Arial, Helvetica, sans-serif;
+  letter-spacing: 4px;
+  text-shadow: 0 0 5px #00e5ff, 0 0 12px #00e5ff, 0 0 22px #ff00cc;
+  white-space: nowrap;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.controller.custom:after {
+  content: "GAMING  •  TOXIC BUT FAMILY";
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  color: #39ff14;
+  font: 900 13px/1 Arial, Helvetica, sans-serif;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  text-shadow: 0 0 7px #39ff14, 0 0 18px rgba(57,255,20,.8);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* disconnected */
+.custom.disconnected {
+  opacity: .55;
+}
+.custom.disconnected div {
+  opacity: 0;
+}
+.custom.disconnected:before {
+  content: "DYLLDOUGHS  •  CONTROLLER DISCONNECTED";
+  color: #ff3030;
+  text-shadow: 0 0 8px #ff3030, 0 0 20px #ff3030;
+}
+
+/* triggers */
+.custom .triggers {
+  position: absolute;
+  width: 586px;
+  height: 65px;
+  left: 99px;
+  top: 4px;
+  z-index: 4;
+}
+.custom .trigger {
+  width: 86px;
+  height: 65px;
+  box-sizing: border-box;
+  border: 4px solid #20243a;
+  border-radius: 22px;
+  background: linear-gradient(145deg,#292e49,#090b15);
+  opacity: .45;
+  box-shadow: inset 0 0 15px rgba(0,229,255,.2), 0 0 7px #00e5ff;
+}
+.custom .trigger.left { float: left; }
+.custom .trigger.right { float: right; }
+.custom .trigger.pressed {
+  opacity: 1;
+  border-color: #00e5ff;
+  background: linear-gradient(145deg,#00e5ff,#087dff);
+  box-shadow: 0 0 9px #00e5ff, 0 0 25px #00e5ff, inset 0 0 12px #fff;
+}
+
+/* bumpers */
+.custom .bumpers {
+  position: absolute;
+  width: 586px;
+  height: 28px;
+  left: 99px;
+  top: 70px;
+  z-index: 5;
+}
+.custom .bumper {
+  width: 89px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 3px solid #25283d;
+  border-radius: 13px;
+  background: linear-gradient(180deg,#252a42,#090b13);
+  opacity: .55;
+  box-shadow: 0 0 8px rgba(255,0,204,.35);
+}
+.custom .bumper.left { float: left; }
+.custom .bumper.right { float: right; }
+.custom .bumper.pressed {
+  opacity: 1;
+  border-color: #ff00cc;
+  background: linear-gradient(180deg,#ff00cc,#8700ff);
+  box-shadow: 0 0 9px #ff00cc, 0 0 24px #ff00cc;
+}
+
+/* player indicator */
+.custom .quadrant {
+  position: absolute;
+  width: 111px;
+  height: 17px;
+  top: 122px;
+  left: 336px;
+  border-radius: 9px;
+  background: linear-gradient(90deg,#00e5ff,#ff00cc,#39ff14);
+  box-shadow: 0 0 8px #00e5ff, 0 0 16px #ff00cc;
+}
+.custom .p0 { filter: brightness(1.3); }
+.custom .p1 { filter: hue-rotate(70deg) brightness(1.3); }
+.custom .p2 { filter: hue-rotate(150deg) brightness(1.3); }
+.custom .p3 { filter: hue-rotate(230deg) brightness(1.3); }
+
+/* menu buttons */
+.custom .arrows {
+  position: absolute;
+  width: 205px;
+  height: 32px;
+  top: 170px;
+  left: 291px;
+  z-index: 6;
+}
+.custom .back,
+.custom .start {
+  width: 58px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 3px solid #00e5ff;
+  border-radius: 12px;
+  background: #101326;
+  box-shadow: 0 0 7px #00e5ff;
+}
+.custom .back { float: left; }
+.custom .start { float: right; }
+.custom .back:after,
+.custom .start:after {
+  display: block;
+  color: #fff;
+  font: 900 8px/22px Arial, Helvetica, sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.custom .back:after { content:"VIEW"; }
+.custom .start:after { content:"MENU"; }
+.custom .back.pressed,
+.custom .start.pressed {
+  background: #00e5ff;
+  box-shadow: 0 0 10px #00e5ff, 0 0 22px #00e5ff;
+}
+
+/* face buttons */
+.custom .abxy {
+  position: absolute;
+  width: 204px;
+  height: 205px;
+  top: 192px;
+  left: 535px;
+  z-index: 7;
+}
+.custom .button {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 28%,#404760 0%,#171a2b 42%,#070811 76%);
+  border: 4px solid #30354c;
+  box-shadow: inset 0 0 9px rgba(255,255,255,.08), 0 0 8px rgba(0,0,0,.8);
+  color: #fff;
+  font: 900 21px/54px Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: 0 0 7px currentColor;
+}
+.custom .button:after { display:block; }
+.custom .a { top:142px; left:71px; border-color:#39ff14; color:#39ff14; }
+.custom .b { top:71px; right:0; border-color:#ff3030; color:#ff3030; }
+.custom .x { top:71px; left:0; border-color:#00e5ff; color:#00e5ff; }
+.custom .y { top:0; left:71px; border-color:#ffe600; color:#ffe600; }
+.custom .a:after { content:"A"; }
+.custom .b:after { content:"B"; }
+.custom .x:after { content:"X"; }
+.custom .y:after { content:"Y"; }
+.custom .button.pressed {
+  margin-top: 5px;
+  background: radial-gradient(circle,#fff 0%,currentColor 22%,#15182a 74%);
+  box-shadow: 0 0 10px currentColor, 0 0 25px currentColor, inset 0 0 12px #fff;
+}
+
+/* sticks */
+.custom .sticks {
+  position: absolute;
+  width: 364px;
+  height: 105px;
+  top: 327px;
+  left: 210px;
+  z-index: 7;
+}
+.custom .stick {
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 8px solid #20243a;
+  background: radial-gradient(circle at 35% 30%,#555d78,#1a1d2d 48%,#080910 76%);
+  box-shadow: 0 0 0 4px #00e5ff, 0 0 14px #00e5ff, inset 0 0 18px #000;
+}
+.custom .stick.left { top:0; left:0; }
+.custom .stick.right { top:0; left:259px; }
+.custom .stick:after {
+  content:"";
+  position:absolute;
+  width:30px;
+  height:30px;
+  left:29px;
+  top:29px;
+  border-radius:50%;
+  border:3px solid rgba(255,255,255,.22);
+  box-shadow:0 0 8px rgba(0,229,255,.55);
+}
+.custom .stick.pressed {
+  border-color:#ff00cc;
+  box-shadow:0 0 0 4px #ff00cc,0 0 16px #ff00cc,0 0 30px rgba(255,0,204,.7),inset 0 0 18px #000;
+}
+
+/* d-pad */
+.custom .dpad {
+  position:absolute;
+  width:140px;
+  height:132px;
+  top:202px;
+  left:75px;
+  z-index:7;
+}
+.custom .face {
+  position:absolute;
+  box-sizing:border-box;
+  background:#101325;
+  border:4px solid #ff00cc;
+  box-shadow:0 0 8px #ff00cc, inset 0 0 9px rgba(255,0,204,.25);
+}
+.custom .face.up,
+.custom .face.down {
+  width:38px;
+  height:52px;
+  left:50px;
+}
+.custom .face.left,
+.custom .face.right {
+  width:52px;
+  height:38px;
+  top:47px;
+}
+.custom .face.up { top:0; border-radius:12px 12px 5px 5px; }
+.custom .face.down { top:79px; border-radius:5px 5px 12px 12px; }
+.custom .face.left { left:0; border-radius:12px 5px 5px 12px; }
+.custom .face.right { right:0; border-radius:5px 12px 12px 5px; }
+.custom .face.pressed {
+  margin-top:5px;
+  background:#ff00cc;
+  border-color:#fff;
+  box-shadow:0 0 10px #ff00cc,0 0 24px #ff00cc,inset 0 0 10px #fff;
+}
+
+/* fight-stick compatibility */
+.custom .trigger-button.left,
+.custom .trigger-button.right,
+.custom .fstick {
+  display:none;
+}
+
+
+/*
+===========================================================
+DYLLDOUGHS CARTOON NEON — PAGE PLACEMENT FIX
+===========================================================
+
+This block intentionally changes ONLY where the controller sits
+on the Gamepad Viewer page.
+
+The cartoon controller artwork/controls above are left alone.
+
+GPV can apply its own controller positioning. These overrides put
+the finished controller back into the visible page area instead
+of leaving it clipped at the top.
+*/
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    overflow: hidden !important;
+}
+
+.controller.custom {
+    position: absolute !important;
+
+    /* page placement */
+    top: 35px !important;
+    left: 50% !important;
+
+    /* center horizontally without changing the skin itself */
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    transform: translateX(-50%) !important;
+}
+
+/*
+Keep GPV's internal controller movement transforms working.
+Only the outer controller gets the page-centering transform.
+*/
+
+/*
+===========================================================
+DYLLDOUGHS — PINK TRIGGER GLOW
+===========================================================
+Make the bottom/trigger controls light up hot pink,
+matching the bumper glow when pressed.
+*/
+
+/* Left/right trigger pressed */
+.custom .trigger.pressed {
+    background: linear-gradient(
+        180deg,
+        #ff58c7 0%,
+        #ff159f 48%,
+        #b90070 100%
+    ) !important;
+
+    border-color: rgba(255, 105, 215, .95) !important;
+
+    box-shadow:
+        0 0 8px rgba(255, 25, 180, .95),
+        0 0 18px rgba(255, 25, 180, .85),
+        0 0 32px rgba(255, 25, 180, .55),
+        inset 0 0 13px rgba(255, 150, 230, .45) !important;
+
+    filter: brightness(1.3) !important;
+}
+
+/* Keep the pink trigger glow visible during pressure */
+.custom .trigger.left.pressed,
+.custom .trigger.right.pressed {
+    border-color: #ff4fc7 !important;
+    box-shadow:
+        0 0 10px #ff1caf,
+        0 0 22px rgba(255, 28, 177, .9),
+        0 0 38px rgba(255, 28, 177, .5),
+        inset 0 0 15px rgba(255, 115, 220, .42) !important;
+}
