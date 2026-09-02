@@ -1,0 +1,153 @@
+/*
+  DYLLDOUGHS GAMING — Gamepad Viewer EDIT SKIN
+  Use with: &editcss=...
+  This intentionally modifies the built-in Xbox skin instead of replacing
+  Gamepad Viewer's controller HTML/positioning.
+*/
+
+.controller.edit {
+  filter: drop-shadow(0 0 5px rgba(0,229,255,.9))
+          drop-shadow(0 0 14px rgba(255,0,204,.45));
+}
+
+/* Neon edge treatment around the existing controller */
+.controller.edit::before {
+  content: "DYLLDOUGHS GAMING";
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translateX(-50%);
+  z-index: 999;
+  pointer-events: none;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  text-shadow:
+    0 0 4px #00e5ff,
+    0 0 10px #00e5ff,
+    0 0 18px #ff00cc;
+}
+
+.controller.edit::after {
+  content: "TOXIC BUT FAMILY";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  transform: translateX(-50%);
+  z-index: 999;
+  pointer-events: none;
+  color: #39ff14;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  text-shadow: 0 0 7px #39ff14, 0 0 14px #39ff14;
+}
+
+/* Existing Xbox body — preserve its shape, push it toward the DyllDoughs palette */
+.controller.edit {
+  box-shadow:
+    0 0 7px #00e5ff,
+    0 0 18px rgba(0,229,255,.65),
+    0 0 32px rgba(255,0,204,.32),
+    inset 0 0 18px rgba(0,229,255,.12);
+}
+
+/* Face buttons */
+.controller.edit .button {
+  border-radius: 50%;
+  transition: filter .08s, transform .08s;
+  filter: saturate(1.45) contrast(1.12);
+}
+
+.controller.edit .button.pressed {
+  filter: saturate(2) brightness(1.35) drop-shadow(0 0 8px #fff);
+  transform: translateY(3px) scale(.96);
+}
+
+/* Color accents for the four face buttons */
+.controller.edit .a {
+  box-shadow: 0 0 8px #39ff14, 0 0 16px rgba(57,255,20,.65);
+}
+.controller.edit .b {
+  box-shadow: 0 0 8px #ff3030, 0 0 16px rgba(255,48,48,.55);
+}
+.controller.edit .x {
+  box-shadow: 0 0 8px #00e5ff, 0 0 16px rgba(0,229,255,.65);
+}
+.controller.edit .y {
+  box-shadow: 0 0 8px #ffe600, 0 0 16px rgba(255,230,0,.55);
+}
+
+/* D-pad */
+.controller.edit .face {
+  filter: saturate(1.5) contrast(1.12);
+  transition: filter .08s, transform .08s;
+}
+
+.controller.edit .face.pressed {
+  filter: brightness(1.55) saturate(2)
+          drop-shadow(0 0 7px #ff00cc)
+          drop-shadow(0 0 14px #00e5ff);
+  transform: translateY(3px);
+}
+
+/* Sticks */
+.controller.edit .stick {
+  filter: saturate(1.4) contrast(1.12)
+          drop-shadow(0 0 5px rgba(0,229,255,.65));
+}
+
+.controller.edit .stick.pressed {
+  filter: brightness(1.35) saturate(1.8)
+          drop-shadow(0 0 8px #ff00cc)
+          drop-shadow(0 0 16px #ff00cc);
+}
+
+/* Triggers and bumpers */
+.controller.edit .trigger,
+.controller.edit .bumper {
+  filter: saturate(1.35) contrast(1.08);
+  transition: filter .08s;
+}
+
+.controller.edit .trigger.pressed,
+.controller.edit .bumper.pressed {
+  filter: brightness(1.4) saturate(2)
+          drop-shadow(0 0 7px #00e5ff)
+          drop-shadow(0 0 14px #ff00cc);
+}
+
+/* Start / Back */
+.controller.edit .back,
+.controller.edit .start {
+  filter: saturate(1.5);
+}
+
+.controller.edit .back.pressed,
+.controller.edit .start.pressed {
+  filter: brightness(1.5)
+          drop-shadow(0 0 7px #00e5ff)
+          drop-shadow(0 0 14px #00e5ff);
+}
+
+/* Player indicator */
+.controller.edit .quadrant {
+  filter: saturate(1.8)
+          drop-shadow(0 0 6px #00e5ff);
+}
+
+/* Disconnected controller */
+.controller.edit.disconnected {
+  filter: grayscale(.35) drop-shadow(0 0 6px #ff3030);
+}
+
+.controller.edit.disconnected::before {
+  content: "DYLLDOUGHS GAMING • CONTROLLER DISCONNECTED";
+  color: #ff3030;
+  text-shadow: 0 0 7px #ff3030, 0 0 16px #ff3030;
+}
