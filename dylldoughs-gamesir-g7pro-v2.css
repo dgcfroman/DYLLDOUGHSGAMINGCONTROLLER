@@ -1,0 +1,360 @@
+/* DYLLDOUGHS GAMING — Gamepad Viewer Custom Skin
+   Shape: GameSir G7 Pro inspired Xbox-style controller
+   Clean cyber/neon finish — no cartoon graphics
+*/
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    overflow: hidden !important;
+}
+
+/* Main GameSir G7 Pro-inspired silhouette */
+.controller.custom {
+    position: absolute !important;
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+
+    width: 760px !important;
+    height: 500px !important;
+
+    background:
+        radial-gradient(ellipse at 50% 42%, rgba(55,65,75,.32) 0%, rgba(18,21,25,.72) 52%, rgba(7,9,12,.98) 100%),
+        linear-gradient(145deg, #20252b 0%, #0c0f13 48%, #171b20 100%) !important;
+
+    border-radius: 185px 185px 150px 150px / 135px 135px 175px 175px !important;
+
+    border: 2px solid rgba(120,220,235,.55) !important;
+
+    box-shadow:
+        0 0 0 2px rgba(255,55,180,.20),
+        0 0 22px rgba(0,225,255,.28),
+        0 0 48px rgba(255,35,180,.16),
+        inset 0 2px 3px rgba(255,255,255,.10),
+        inset 0 -18px 35px rgba(0,0,0,.55) !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Soft inner shell */
+.controller.custom:before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 10px !important;
+    border-radius: 175px 175px 142px 142px / 125px 125px 165px 165px !important;
+    border: 1px solid rgba(255,255,255,.055) !important;
+    pointer-events: none !important;
+}
+
+/* Cyan left/right shell accents */
+.controller.custom:after {
+    content: "" !important;
+    position: absolute !important;
+    left: 38px !important;
+    right: 38px !important;
+    top: 64px !important;
+    height: 2px !important;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,235,255,.75),
+        transparent 32%,
+        transparent 68%,
+        rgba(255,45,190,.75),
+        transparent
+    ) !important;
+    box-shadow: 0 0 10px rgba(0,220,255,.35) !important;
+    pointer-events: none !important;
+}
+
+/* Triggers — wide, rounded GameSir-style */
+.custom .triggers {
+    position: absolute !important;
+    left: 92px !important;
+    right: 92px !important;
+    top: 0 !important;
+}
+
+.custom .trigger {
+    width: 112px !important;
+    height: 74px !important;
+    top: 4px !important;
+    background: linear-gradient(180deg, #343a42, #11151a) !important;
+    border: 1px solid rgba(255,255,255,.10) !important;
+    border-radius: 28px 28px 12px 12px !important;
+    box-shadow: inset 0 2px 4px rgba(255,255,255,.08), 0 4px 12px rgba(0,0,0,.45) !important;
+}
+
+.custom .trigger.left {
+    left: 0 !important;
+}
+
+.custom .trigger.right {
+    right: 0 !important;
+}
+
+.custom .trigger.pressed {
+    box-shadow: 0 0 18px rgba(0,235,255,.75), inset 0 0 12px rgba(0,235,255,.22) !important;
+}
+
+/* Bumpers */
+.custom .bumpers {
+    position: absolute !important;
+    left: 96px !important;
+    right: 96px !important;
+    top: 67px !important;
+}
+
+.custom .bumper {
+    width: 112px !important;
+    height: 27px !important;
+    background: linear-gradient(180deg, #343a42, #15191e) !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(255,255,255,.10) !important;
+}
+
+.custom .bumper.left {
+    left: 0 !important;
+}
+
+.custom .bumper.right {
+    right: 0 !important;
+}
+
+.custom .bumper.pressed {
+    box-shadow: 0 0 15px rgba(255,40,185,.65) !important;
+}
+
+/* Center bridge / Xbox-style control area */
+.custom .quadrant {
+    position: absolute !important;
+    left: 50% !important;
+    top: 91px !important;
+    transform: translateX(-50%) !important;
+    width: 235px !important;
+    height: 92px !important;
+    background: linear-gradient(180deg, rgba(31,35,41,.95), rgba(9,11,14,.95)) !important;
+    border-radius: 42px !important;
+    border: 1px solid rgba(255,255,255,.06) !important;
+    box-shadow: inset 0 3px 10px rgba(0,0,0,.45) !important;
+}
+
+/* Menu buttons */
+.custom .start,
+.custom .back {
+    top: 111px !important;
+    width: 42px !important;
+    height: 26px !important;
+    background: #11151a !important;
+    border: 1px solid rgba(255,255,255,.14) !important;
+    border-radius: 8px !important;
+    box-shadow: inset 0 2px 5px rgba(255,255,255,.05) !important;
+}
+
+.custom .start {
+    right: 194px !important;
+}
+
+.custom .back {
+    left: 194px !important;
+}
+
+.custom .start.pressed,
+.custom .back.pressed {
+    box-shadow: 0 0 13px rgba(0,235,255,.7) !important;
+}
+
+/* Xbox logo button */
+.custom .guide {
+    position: absolute !important;
+    left: 50% !important;
+    top: 105px !important;
+    transform: translateX(-50%) !important;
+    width: 49px !important;
+    height: 49px !important;
+    background: radial-gradient(circle, #151a1f, #080a0d) !important;
+    border-radius: 50% !important;
+    border: 2px solid rgba(0,235,255,.60) !important;
+    box-shadow: 0 0 14px rgba(0,235,255,.22), inset 0 0 12px rgba(0,0,0,.8) !important;
+}
+
+/* Face-button diamond */
+.custom .abxy {
+    position: absolute !important;
+    right: 95px !important;
+    top: 164px !important;
+    width: 190px !important;
+    height: 190px !important;
+}
+
+.custom .button {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    border: 2px solid rgba(255,255,255,.12) !important;
+    box-sizing: border-box !important;
+    box-shadow: inset 0 3px 5px rgba(255,255,255,.10), 0 5px 9px rgba(0,0,0,.50) !important;
+}
+
+.custom .a {
+    left: 72px !important;
+    top: 72px !important;
+    background: radial-gradient(circle at 35% 30%, #61ff72, #0d9d39 72%) !important;
+}
+
+.custom .b {
+    left: 125px !important;
+    top: 20px !important;
+    background: radial-gradient(circle at 35% 30%, #ff6666, #b51c32 72%) !important;
+}
+
+.custom .x {
+    left: 20px !important;
+    top: 20px !important;
+    background: radial-gradient(circle at 35% 30%, #58eaff, #1476b8 72%) !important;
+}
+
+.custom .y {
+    left: 72px !important;
+    top: -32px !important;
+    background: radial-gradient(circle at 35% 30%, #ffe35a, #d58a19 72%) !important;
+}
+
+.custom .button.pressed {
+    filter: brightness(1.35) !important;
+    box-shadow:
+        0 0 20px currentColor,
+        inset 0 0 13px rgba(255,255,255,.25) !important;
+}
+
+/* Analog sticks — offset lower/inner like G7 Pro */
+.custom .sticks {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 205px !important;
+}
+
+.custom .stick {
+    width: 92px !important;
+    height: 92px !important;
+    background: radial-gradient(circle at 38% 32%, #3a4148, #11151a 68%, #07090b) !important;
+    border-radius: 50% !important;
+    border: 3px solid #080a0d !important;
+    box-shadow:
+        0 0 0 2px rgba(0,225,255,.32),
+        0 7px 13px rgba(0,0,0,.65),
+        inset 0 7px 12px rgba(255,255,255,.07) !important;
+}
+
+.custom .stick.left {
+    left: 157px !important;
+    top: 0 !important;
+}
+
+.custom .stick.right {
+    right: 157px !important;
+    top: 111px !important;
+}
+
+.custom .stick.pressed {
+    box-shadow:
+        0 0 0 2px rgba(255,45,190,.80),
+        0 0 23px rgba(255,45,190,.65),
+        inset 0 0 16px rgba(255,45,190,.20) !important;
+}
+
+/* D-pad */
+.custom .dpad {
+    position: absolute !important;
+    left: 93px !important;
+    top: 238px !important;
+    width: 116px !important;
+    height: 116px !important;
+}
+
+.custom .face {
+    background: linear-gradient(145deg, #353b42, #0d1115) !important;
+    border: 1px solid rgba(255,255,255,.10) !important;
+    box-shadow: inset 0 2px 4px rgba(255,255,255,.06), 0 5px 9px rgba(0,0,0,.55) !important;
+}
+
+.custom .face.up,
+.custom .face.down {
+    width: 36px !important;
+    height: 52px !important;
+    left: 40px !important;
+}
+
+.custom .face.left,
+.custom .face.right {
+    width: 52px !important;
+    height: 36px !important;
+    top: 40px !important;
+}
+
+.custom .face.up {
+    top: 0 !important;
+}
+
+.custom .face.down {
+    bottom: 0 !important;
+}
+
+.custom .face.left {
+    left: 0 !important;
+}
+
+.custom .face.right {
+    right: 0 !important;
+}
+
+.custom .face.pressed {
+    background: linear-gradient(145deg, #414850, #151a20) !important;
+    box-shadow: 0 0 16px rgba(0,235,255,.72) !important;
+}
+
+/* Branding */
+.controller.custom .branding {
+    position: absolute !important;
+    left: 50% !important;
+    top: 31px !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: 4px !important;
+    color: rgba(225,250,255,.88) !important;
+    font-size: 15px !important;
+    text-shadow: 0 0 9px rgba(0,225,255,.65) !important;
+}
+
+/* Decorative grip highlights */
+.controller.custom .grip-left,
+.controller.custom .grip-right {
+    position: absolute !important;
+    bottom: 35px !important;
+    width: 110px !important;
+    height: 110px !important;
+    border-radius: 50% !important;
+    opacity: .30 !important;
+    pointer-events: none !important;
+}
+
+.controller.custom .grip-left {
+    left: 50px !important;
+    border: 1px solid rgba(0,235,255,.55) !important;
+}
+
+.controller.custom .grip-right {
+    right: 50px !important;
+    border: 1px solid rgba(255,45,190,.55) !important;
+}
+
+/* Keep GPV button movement working */
+.custom .stick {
+    transition: box-shadow .08s ease, filter .08s ease !important;
+}
