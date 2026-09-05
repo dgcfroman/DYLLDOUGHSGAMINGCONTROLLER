@@ -1,0 +1,45 @@
+/*
+ DYLLDOUGHS GAMING - XBOX ONE RESKIN
+ Built on GamePad Viewer's working Xbox One skin.
+ This is an EDIT CSS file: it preserves GPV's native controller/input DOM.
+*/
+
+.controller.xbox.edit,
+.controller.xbox {
+    background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 100% 100% !important;
+}
+
+/* Keep GPV's native Xbox canvas dimensions. */
+.controller.xbox {
+    width: 784px !important;
+    height: 558px !important;
+}
+
+/*
+ Hide the stock Xbox visual sprites.
+ DO NOT use display:none: GPV still needs these elements for input state handling.
+*/
+.controller.xbox.edit .trigger,
+.controller.xbox.edit .bumper,
+.controller.xbox.edit .button,
+.controller.xbox.edit .stick,
+.controller.xbox.edit .face,
+.controller.xbox.edit .back,
+.controller.xbox.edit .start,
+.controller.xbox.edit .quadrant {
+    background-image: none !important;
+    opacity: 0 !important;
+}
+
+/* Keep the controller artwork visible even while inputs are active. */
+.controller.xbox.edit .triggers,
+.controller.xbox.edit .bumpers,
+.controller.xbox.edit .abxy,
+.controller.xbox.edit .sticks,
+.controller.xbox.edit .dpad,
+.controller.xbox.edit .arrows {
+    background: transparent !important;
+}
