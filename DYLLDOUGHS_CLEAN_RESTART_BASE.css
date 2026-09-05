@@ -1,21 +1,68 @@
-/* DYLLDOUGHS GAMING — CLEAN RESTART
-   Xbox One GPV native skin + DYLLDOUGHS BASE ONLY.
-   DO NOT alter GPV controls, positions, or pressed-state logic.
+/* DYLLDOUGHS GAMING — FINAL QUICK ALIGNMENT
+   Based on the working Xbox One GPV skin + correctly shaped DYLLDOUGHS base.
+   Native GPV input logic is untouched.
 */
 
 .controller.xbox {
     background: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/ChatGPT%20Image%20Sep%205%2C%202026%2C%2005_25_12%20PM.png") center center / 750px 630px no-repeat !important;
-    height: 630px !important;
     width: 750px !important;
+    height: 630px !important;
 }
 
-.xbox.white {
-    background: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/ChatGPT%20Image%20Sep%205%2C%202026%2C%2005_25_12%20PM.png") center center / 750px 630px no-repeat !important;
+/* ABXY — tiny correction to sit directly over the printed buttons. */
+.xbox .abxy {
+    top: 125px !important;
+    left: 487px !important;
 }
 
-.xbox.disconnected {
-    background: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/ChatGPT%20Image%20Sep%205%2C%202026%2C%2005_25_12%20PM.png") center center / 750px 630px no-repeat !important;
+/* Keep GPV's native button arrangement. */
+.xbox .a { top: 108px !important; left: 55px !important; }
+.xbox .b { top: 58px !important; right: 0 !important; }
+.xbox .x { top: 58px !important; left: 4px !important; }
+.xbox .y { top: 7px !important; left: 55px !important; }
+
+/* Sticks — left is already centered; right needs a small downward correction. */
+.xbox .sticks {
+    top: 239px !important;
+    left: 144px !important;
+}
+.xbox .stick.left {
+    top: -70px !important;
+    left: 0 !important;
+}
+.xbox .stick.right {
+    top: 13px !important;
+    left: 294px !important;
 }
 
-/* Everything below is intentionally NOT restyled.
-   GPV's native Xbox One CSS continues handling all inputs. */
+/* D-pad is already centered on the printed D-pad. */
+.xbox .dpad {
+    top: 345px !important;
+    left: 223px !important;
+}
+
+/* Shoulder pressed indicators:
+   move them onto the actual upper shoulder areas of the new artwork. */
+.xbox .bumper.left {
+    position: relative !important;
+    left: -48px !important;
+    top: -42px !important;
+}
+.xbox .bumper.right {
+    position: relative !important;
+    left: 48px !important;
+    top: -42px !important;
+}
+
+/* Triggers are taller than the artwork's visible shoulder area,
+   so move the native indicators down slightly rather than changing their size. */
+.xbox .trigger.left {
+    position: relative !important;
+    left: 0 !important;
+    top: 45px !important;
+}
+.xbox .trigger.right {
+    position: relative !important;
+    left: 0 !important;
+    top: 45px !important;
+}
