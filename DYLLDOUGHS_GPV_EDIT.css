@@ -1,0 +1,53 @@
+/* DYLLDOUGHS GAMING — GPV editcss overlay */
+/* Uses GPV's built-in Xbox controller DOM so native inputs remain functional. */
+
+.controller.edit {
+  background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-color: transparent !important;
+}
+
+/* Keep the native Xbox input elements for GamePad Viewer to track,
+   but hide their artwork so only the DYLLDOUGHS image is visible. */
+.controller.edit .triggers,
+.controller.edit .bumpers,
+.controller.edit .arrows,
+.controller.edit .abxy,
+.controller.edit .dpad,
+.controller.edit .sticks,
+.controller.edit .quadrant {
+  background: transparent !important;
+}
+
+.controller.edit .trigger,
+.controller.edit .bumper,
+.controller.edit .button,
+.controller.edit .face,
+.controller.edit .stick,
+.controller.edit .back,
+.controller.edit .start,
+.controller.edit .guide {
+  opacity: 0 !important;
+}
+
+/* Native pressed classes prove the input is being detected. */
+.controller.edit .trigger.pressed,
+.controller.edit .bumper.pressed,
+.controller.edit .button.pressed,
+.controller.edit .face.pressed,
+.controller.edit .back.pressed,
+.controller.edit .start.pressed,
+.controller.edit .guide.pressed {
+  opacity: 1 !important;
+  background: radial-gradient(circle, rgba(255,255,255,.85) 0%, rgba(255,0,204,.85) 38%, rgba(0,229,255,.5) 68%, transparent 82%) !important;
+  box-shadow: 0 0 16px rgba(255,0,204,1), 0 0 28px rgba(0,229,255,.9) !important;
+}
+
+/* Don't hide the sticks' native movement transform. */
+.controller.edit .stick.pressed {
+  opacity: 1 !important;
+  background: radial-gradient(circle, rgba(0,229,255,.8), rgba(255,0,204,.4) 58%, transparent 80%) !important;
+  box-shadow: 0 0 18px rgba(0,229,255,1), 0 0 30px rgba(255,0,204,.8) !important;
+}
