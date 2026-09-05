@@ -1,166 +1,234 @@
-/* DYLLDOUGHS GAMING — Gamepad Viewer custom skin
-   Artwork: 1536 x 1024
-   Uses the exact PNG uploaded to the DYLLDOUGHSGAMINGCONTROLLER repo.
+/* DYLLDOUGHS GAMING — GamePad Viewer custom skin
+   Uses the uploaded controller artwork as the base layer.
+   Built around GPV's native custom-skin canvas (784x558).
 */
 
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  overflow: hidden !important;
+}
+
 .controller.custom {
-    width: 1536px !important;
-    height: 1024px !important;
-    min-width: 1536px !important;
-    min-height: 1024px !important;
-    max-width: none !important;
-    max-height: none !important;
-    overflow: visible !important;
-    position: relative;
-    margin: 0;
-    background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 1536px 1024px;
+  position: relative !important;
+  width: 784px !important;
+  height: 558px !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+
+  /* The source art is 1536x1024 (3:2). Fit the complete art inside
+     GPV's standard custom-skin canvas without distortion. */
+  background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center top !important;
+  background-size: 784px 522.6667px !important;
 }
 
-/* Keep only the custom artwork visible when disconnected. */
 .custom.disconnected {
-    background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png");
+  background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png") !important;
 }
-.custom.disconnected > div {
-    display: none;
-}
+.custom.disconnected > div { opacity: 0 !important; }
 
-/* Input layers are transparent until pressed. */
+/* ---------------------------------------------------------
+   TRIGGERS / BUMPERS
+   --------------------------------------------------------- */
 .custom .triggers {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1536px;
-    height: 150px;
+  position: absolute !important;
+  left: 99px !important;
+  top: 0 !important;
+  width: 586px !important;
+  height: 65px !important;
+  z-index: 20 !important;
 }
 .custom .trigger {
-    opacity: 0;
-    background: transparent;
-    position: absolute;
-    top: 0;
-    width: 500px;
-    height: 150px;
+  width: 86px !important;
+  height: 65px !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  opacity: 0 !important;
+  border: 0 !important;
 }
-.custom .trigger.left { left: 120px; }
-.custom .trigger.right { right: 120px; }
+.custom .trigger.left { float: left !important; }
+.custom .trigger.right { float: right !important; }
 .custom .trigger.pressed {
-    opacity: .35;
-    background: radial-gradient(ellipse, rgba(255,0,204,.75), rgba(0,255,255,.25) 65%, transparent 78%);
-    box-shadow: 0 0 25px rgba(255,0,204,.9), inset 0 0 25px rgba(0,255,255,.55);
+  opacity: 1 !important;
+  background: radial-gradient(ellipse, rgba(255,0,204,.72) 0%, rgba(0,229,255,.38) 48%, transparent 75%) !important;
+  box-shadow: 0 0 12px rgba(255,0,204,.95), inset 0 0 16px rgba(0,229,255,.8) !important;
 }
 
 .custom .bumpers {
-    position: absolute;
-    left: 0;
-    top: 50px;
-    width: 1536px;
-    height: 100px;
+  position: absolute !important;
+  left: 99px !important;
+  top: 72px !important;
+  width: 586px !important;
+  height: 28px !important;
+  z-index: 21 !important;
 }
 .custom .bumper {
-    opacity: 0;
-    background: transparent;
-    position: absolute;
-    top: 0;
-    width: 470px;
-    height: 85px;
+  width: 89px !important;
+  height: 28px !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  opacity: 0 !important;
+  border: 0 !important;
 }
-.custom .bumper.left { left: 125px; }
-.custom .bumper.right { right: 125px; }
+.custom .bumper.left { float: left !important; }
+.custom .bumper.right { float: right !important; }
 .custom .bumper.pressed {
-    opacity: .38;
-    background: linear-gradient(90deg, rgba(0,255,255,.7), rgba(255,0,204,.7));
-    box-shadow: 0 0 25px rgba(0,255,255,.8), inset 0 0 20px rgba(255,0,204,.55);
+  opacity: 1 !important;
+  background: linear-gradient(90deg, rgba(0,229,255,.82), rgba(255,0,204,.82)) !important;
+  box-shadow: 0 0 12px rgba(255,0,204,.9), inset 0 0 12px rgba(0,229,255,.65) !important;
 }
 
-/* D-pad — artwork is already present in the PNG. */
+/* ---------------------------------------------------------
+   PLAYER INDICATOR + GUIDE
+   --------------------------------------------------------- */
+.custom .quadrant {
+  position: absolute !important;
+  width: 111px !important;
+  height: 17px !important;
+  top: 140px !important;
+  left: 336px !important;
+  background: transparent !important;
+  opacity: 0 !important;
+}
+.custom .guide {
+  opacity: 0 !important;
+}
+
+/* ---------------------------------------------------------
+   VIEW / MENU BUTTONS
+   NOTE: .arrows is the container for .back and .start in GPV.
+   --------------------------------------------------------- */
 .custom .arrows {
-    position: absolute;
-    left: 500px;
-    top: 400px;
-    width: 300px;
-    height: 240px;
+  position: absolute !important;
+  width: 205px !important;
+  height: 32px !important;
+  top: 170px !important;
+  left: 291px !important;
+  z-index: 25 !important;
 }
-.custom .arrow {
-    position: absolute;
-    opacity: 0;
-    background: transparent;
+.custom .back,
+.custom .start {
+  width: 58px !important;
+  height: 28px !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  border: 0 !important;
+  opacity: 0 !important;
 }
-.custom .arrow.up,
-.custom .arrow.down {
-    left: 95px;
-    width: 110px;
-    height: 85px;
-}
-.custom .arrow.left,
-.custom .arrow.right {
-    top: 75px;
-    width: 95px;
-    height: 95px;
-}
-.custom .arrow.up { top: 0; }
-.custom .arrow.down { bottom: 0; }
-.custom .arrow.left { left: 0; }
-.custom .arrow.right { right: 0; }
-.custom .arrow.pressed {
-    opacity: .45;
-    background: radial-gradient(circle, rgba(255,0,204,.85), rgba(0,255,255,.25) 65%, transparent 80%);
-    box-shadow: 0 0 25px rgba(255,0,204,.85);
+.custom .back { float: left !important; }
+.custom .start { float: right !important; }
+.custom .back.pressed,
+.custom .start.pressed {
+  opacity: 1 !important;
+  background: radial-gradient(ellipse, rgba(0,229,255,.9), rgba(255,0,204,.35) 65%, transparent 80%) !important;
+  box-shadow: 0 0 18px rgba(0,229,255,.95) !important;
 }
 
-/* ABXY */
+/* ---------------------------------------------------------
+   FACE BUTTONS
+   --------------------------------------------------------- */
 .custom .abxy {
-    position: absolute;
-    left: 1010px;
-    top: 120px;
-    width: 330px;
-    height: 340px;
+  position: absolute !important;
+  width: 204px !important;
+  height: 205px !important;
+  top: 156px !important;
+  left: 538px !important;
+  z-index: 30 !important;
 }
 .custom .button {
-    position: absolute;
-    width: 105px;
-    height: 105px;
-    opacity: 0;
-    border-radius: 50%;
-    background: transparent;
+  position: absolute !important;
+  width: 62px !important;
+  height: 62px !important;
+  box-sizing: border-box !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  color: transparent !important;
 }
-.custom .button.y { left: 112px; top: 0; }
-.custom .button.x { left: 0; top: 112px; }
-.custom .button.b { right: 0; top: 112px; }
-.custom .button.a { left: 112px; bottom: 0; }
+.custom .button.a { top: 142px !important; left: 71px !important; }
+.custom .button.b { top: 71px !important; right: 0 !important; }
+.custom .button.x { top: 71px !important; left: 0 !important; }
+.custom .button.y { top: 0 !important; left: 71px !important; }
 .custom .button.pressed {
-    opacity: .5;
-    background: radial-gradient(circle, rgba(255,255,255,.35), rgba(255,0,204,.65) 42%, rgba(0,255,255,.2) 72%, transparent 80%);
-    box-shadow: 0 0 20px rgba(255,0,204,.95), 0 0 35px rgba(0,255,255,.7);
+  opacity: 1 !important;
+  background: radial-gradient(circle, rgba(255,255,255,.55) 0%, rgba(255,0,204,.78) 38%, rgba(0,229,255,.35) 68%, transparent 82%) !important;
+  box-shadow: 0 0 14px rgba(255,0,204,1), 0 0 28px rgba(0,229,255,.85), inset 0 0 12px white !important;
 }
 
-/* Sticks */
+/* ---------------------------------------------------------
+   D-PAD
+   GPV uses .dpad containing four .face elements.
+   --------------------------------------------------------- */
+.custom .dpad {
+  position: absolute !important;
+  width: 140px !important;
+  height: 132px !important;
+  top: 192px !important;
+  left: 74px !important;
+  z-index: 30 !important;
+}
+.custom .face {
+  position: absolute !important;
+  background: transparent !important;
+  opacity: 0 !important;
+  border: 0 !important;
+}
+.custom .face.up,
+.custom .face.down {
+  width: 38px !important;
+  height: 52px !important;
+  left: 50px !important;
+}
+.custom .face.left,
+.custom .face.right {
+  width: 52px !important;
+  height: 38px !important;
+  top: 47px !important;
+}
+.custom .face.up { top: 0 !important; }
+.custom .face.down { top: 79px !important; }
+.custom .face.left { left: 0 !important; }
+.custom .face.right { right: 0 !important; }
+.custom .face.pressed {
+  opacity: 1 !important;
+  background: radial-gradient(circle, rgba(255,0,204,.8), rgba(0,229,255,.35) 62%, transparent 82%) !important;
+  box-shadow: 0 0 14px rgba(255,0,204,.9) !important;
+}
+
+/* ---------------------------------------------------------
+   ANALOG STICKS
+   --------------------------------------------------------- */
 .custom .sticks {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1536px;
-    height: 1024px;
+  position: absolute !important;
+  width: 364px !important;
+  height: 105px !important;
+  top: 328px !important;
+  left: 210px !important;
+  z-index: 30 !important;
 }
 .custom .stick {
-    position: absolute;
-    width: 155px;
-    height: 155px;
-    opacity: 0;
-    border-radius: 50%;
-    background: transparent;
+  position: absolute !important;
+  width: 105px !important;
+  height: 105px !important;
+  box-sizing: border-box !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  border: 0 !important;
+  opacity: 0 !important;
 }
-.custom .stick.left { left: 300px; top: 185px; }
-.custom .stick.right { left: 850px; top: 390px; }
+.custom .stick.left { top: 0 !important; left: 0 !important; }
+.custom .stick.right { top: 0 !important; left: 259px !important; }
 .custom .stick.pressed {
-    opacity: .45;
-    background: radial-gradient(circle, rgba(0,255,255,.7), rgba(255,0,204,.3) 60%, transparent 78%);
-    box-shadow: 0 0 22px rgba(0,255,255,.9), 0 0 38px rgba(255,0,204,.65);
+  opacity: 1 !important;
+  background: radial-gradient(circle, rgba(0,229,255,.72), rgba(255,0,204,.35) 58%, transparent 80%) !important;
+  box-shadow: 0 0 16px rgba(0,229,255,.95), 0 0 28px rgba(255,0,204,.7) !important;
 }
 
-/* Hide GPV's built-in visible artwork; our PNG is the artwork layer. */
-.custom .quadrant,
-.custom .face {
-    opacity: 0;
-}
+/* GPV applies inline transforms to sticks; don't override them. */
+
+/* The artwork already contains the visible controller shell. */
