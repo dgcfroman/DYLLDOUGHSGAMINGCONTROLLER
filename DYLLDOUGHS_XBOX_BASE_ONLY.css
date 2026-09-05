@@ -1,0 +1,22 @@
+/* DYLLDOUGHS GAMING - BASE ONLY
+   Exact GPV Xbox One skin geometry.
+   ONLY the controller BASE is replaced.
+   All native GPV buttons, sticks, triggers, D-pad and pressed states remain untouched.
+*/
+
+.controller.xbox {
+    background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/DYLLDOUGHS_XBOX_BASE_750x630.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 750px 630px !important;
+    height: 630px !important;
+    width: 750px !important;
+}
+
+.xbox.white {
+    background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/DYLLDOUGHS_XBOX_BASE_750x630.png") !important;
+}
+
+.xbox.disconnected {
+    background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/DYLLDOUGHS_XBOX_BASE_750x630.png") !important;
+}
