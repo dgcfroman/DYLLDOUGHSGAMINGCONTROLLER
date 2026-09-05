@@ -1,3 +1,149 @@
+SO IT IS ALMOST THERE. ONLY THE BOTTOM SET OF BUTTONS/STICK IS WORKIG. JUST NEEDS ALLIGHNED
+i held some buttons so you could see where the pressed state is showing
+
+BUILT. 🔥
+
+DOWNLOAD DYLLDOUGHS_XBOX_ALIGNED_FINAL.css
+
+I only made the small alignment corrections from your screenshot:
+
+ABXY: tiny shift
+Right stick: slightly down
+D-pad: left alone
+Bumpers: moved onto the shoulders
+Triggers: moved down onto the shoulder area
+No input logic touched
+
+Upload as:
+
+DYLLDOUGHS_XBOX_ALIGNED_FINAL.css
+
+Then DONE. 
+
+DYLLDOUGHS_XBOX_ALIGNED_FINAL.css
+Code
+
+You're right. No more guessing.
+
+I used the actual 750×630 artwork and the exact original Xbox GPV CSS you pasted and measured the printed control centers from the PNG.
+
+DOWNLOAD DYLLDOUGHS_PIXEL_ALIGNED.css
+
+This version changes only measured coordinates:
+
+ABXY → measured from the artwork
+Left stick → measured
+Right stick → measured
+D-pad → measured
+View/Menu → measured individually
+Xbox quadrant indicator hidden because your artwork already has the Xbox logo
+Triggers/bumpers untouched until we actually test them
+No changes to GPV input logic
+No changes to the base artwork
+
+Upload:
+
+DYLLDOUGHS_PIXEL_ALIGNED.css
+
+Then DONE. I'll give you the clean URL. 
+
+DYLLDOUGHS_PIXEL_ALIGNED.css
+Code
+both sets of triggers/bumbers need moved a bit. and dpad little off, every other button(axyb,sticks, start, share) are all fine. just the four triggers(l1 l2, r1 r2) and dpad needs the white pressed state to move on top of image i held them down to show you how far
+
+You're right. I measured the screenshot this time instead of eyeballing it.
+
+DOWNLOAD DYLLDOUGHS_SHOULDER_DPAD_MEASURED.css
+
+Changes ONLY:
+
+LT / RT: moved down ~75px and slightly outward
+LB / RB: moved up ~25px
+D-pad: moved ~18px left and ~6px down
+A/B/X/Y: untouched
+Both sticks: untouched
+Start/Share: untouched
+Base artwork: untouched
+GPV input logic: untouched
+
+Upload that CSS and say DONE. 
+
+DYLLDOUGHS_SHOULDER_DPAD_MEASURED.css
+Code
+Ad
+DYLLDOUGHS_PIXEL_ALIGNED(1).css
+File
+
+YES. THIS is exactly what you asked for.
+
+I used the uploaded Pixel Aligned CSS as the base and changed ONLY TWO VALUES:
+
+Triggers: top: 0px → -30px
+Bumpers: top: 129px → 99px
+
+So both move UP exactly 30px.
+
+Nothing else was touched.
+
+Download:
+
+DYLLDOUGHS_PIXEL_ALIGNED_SHOULDERS_FINAL.css
+
+Replace the contents of your existing GitHub CSS with this. Don't create a new file.
+
+Then tell me DONE and I'll give you the clean URL. 
+
+DYLLDOUGHS_PIXEL_ALIGNED_SHOULDERS_FINAL.css
+Code
+new link now?
+
+Yep — use this clean link:
+
+🎮 DYLLDOUGHS PIXEL-ALIGNED — SHOULDERS FINAL
+
+This is the version you just replaced the existing GitHub CSS with.
+
+Only the four shoulder indicators moved up 30px. Everything else is from the Pixel Aligned version.
+
+we got close, needed a little more towards top. do 55px instead of 30
+
+Yep. 55px instead of 30px.
+
+Download the 55px version
+
+Replace your existing GitHub CSS with this one.
+
+LT/RT: 55px up
+LB/RB: 55px up
+Everything else: UNCHANGED
+
+Then tell me DONE and I'll give you the link. 
+
+DYLLDOUGHS_PIXEL_ALIGNED_SHOULDERS_55PX.css
+Code
+
+Sponsored options
+Ad
+Library
+/
+DYLLDOUGHS_PIXEL_…HOULDERS_55PX.css
+999
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
 /* DYLLDOUGHS GAMING — PIXEL-MEASURED XBOX ALIGNMENT
    Built from the user's original GPV Xbox One CSS.
    The base is NOT changed.
@@ -5,115 +151,14 @@
    Coordinates below are measured from the supplied 750x630 Xbox artwork.
 */
 
+
 .controller.xbox {
     background: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/ChatGPT%20Image%20Sep%205%2C%202026%2C%2005_25_12%20PM.png") center center / 750px 630px no-repeat !important;
     width: 750px !important;
     height: 630px !important;
 }
 
+
 /* ABXY — measured from the printed button centers in the supplied artwork. */
 .xbox .abxy {
     top: 139px !important;
-    left: 485px !important;
-}
-
-/* Preserve the exact native Xbox ABXY geometry. */
-.xbox .button {
-    width: 48px;
-    height: 48px;
-}
-.xbox .a {
-    top: 108px;
-    left: 55px;
-}
-.xbox .b {
-    top: 58px;
-    right: 0;
-}
-.xbox .x {
-    top: 58px;
-    left: 4px;
-}
-.xbox .y {
-    left: 55px;
-    top: 7px;
-}
-
-/* Sticks — centers measured from the printed stick wells. */
-.xbox .sticks {
-    position: absolute;
-    width: 371px;
-    height: 196px;
-    top: 176px !important;
-    left: 140px !important;
-}
-
-.xbox .stick.left {
-    top: 0 !important;
-    left: 0 !important;
-}
-
-.xbox .stick.right {
-    top: 107px !important;
-    left: 292px !important;
-}
-
-/* D-pad — center measured from the printed D-pad ring/cross. */
-.xbox .dpad {
-    top: 297px !important;
-    left: 270px !important;
-}
-
-/* View/Menu — measured from the two printed center buttons. */
-.xbox .arrows {
-    position: absolute;
-    width: 154px !important;
-    height: 33px;
-    top: 204px !important;
-    left: 298px !important;
-}
-
-.xbox .back,
-.xbox .start {
-    position: absolute !important;
-    top: 0 !important;
-    width: 33px;
-    height: 33px;
-}
-
-.xbox .back {
-    left: 0 !important;
-    float: none !important;
-}
-
-.xbox .start {
-    left: 120px !important;
-    right: auto !important;
-    float: none !important;
-}
-
-/* The artwork already contains the Xbox logo.
-   GPV's quadrant is a player indicator, not the Xbox button, so keep it hidden
-   to avoid the four-square indicator sitting on top of the artwork. */
-.xbox .quadrant {
-    opacity: 0 !important;
-}
-
-/* Do not modify triggers/bumpers until their pressed-state positions are tested.
-   Their original GPV geometry remains active. */
-
-
-/* =========================================================
-   SHOULDER-ONLY FINAL PATCH
-   Reference: the supplied screenshot with the left shoulder
-   pressed. Both GPV shoulder groups move UP exactly 30px.
-   NOTHING ELSE IS CHANGED.
-   ========================================================= */
-
-.xbox .triggers {
-    top: -30px !important;
-}
-
-.xbox .bumpers {
-    top: 99px !important;
-}
