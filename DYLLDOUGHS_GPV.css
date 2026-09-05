@@ -1,0 +1,350 @@
+/* =========================================================
+   DYLLDOUGHS GAMING — CUSTOM GAMEPAD VIEWER SKIN
+   ========================================================= */
+
+.controller.custom {
+    width: 1000px;
+    height: 667px;
+
+    background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/DYLLDOUGHS_CONTROLLER.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    position: relative;
+}
+
+/* Hide built-in controller artwork */
+.custom.disconnected {
+    background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/DYLLDOUGHS_CONTROLLER.png");
+}
+
+.custom.disconnected div {
+    display: none;
+}
+
+
+/* =========================================================
+   TRIGGERS
+   ========================================================= */
+
+.custom .triggers {
+    position: absolute;
+    width: 700px;
+    height: 120px;
+    left: 150px;
+    top: 0px;
+}
+
+.custom .trigger {
+    width: 300px;
+    height: 120px;
+    opacity: 0;
+    background: transparent;
+}
+
+.custom .trigger.left {
+    float: left;
+}
+
+.custom .trigger.right {
+    float: right;
+}
+
+.custom .trigger.pressed {
+    opacity: .35;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255,0,204,.8),
+        rgba(0,255,255,.45)
+    );
+
+    box-shadow:
+        0 0 15px #ff00cc,
+        0 0 35px #ff00cc,
+        inset 0 0 20px #00ffff;
+}
+
+
+/* =========================================================
+   BUMPERS
+   ========================================================= */
+
+.custom .bumpers {
+    position: absolute;
+    width: 700px;
+    height: 70px;
+    left: 150px;
+    top: 85px;
+}
+
+.custom .bumper {
+    width: 300px;
+    height: 60px;
+    opacity: 0;
+    background: transparent;
+}
+
+.custom .bumper.left {
+    float: left;
+}
+
+.custom .bumper.right {
+    float: right;
+}
+
+.custom .bumper.pressed {
+    opacity: .45;
+
+    background: linear-gradient(
+        90deg,
+        #00ffff,
+        #ff00cc
+    );
+
+    box-shadow:
+        0 0 15px #00ffff,
+        0 0 30px #ff00cc;
+}
+
+
+/* =========================================================
+   D-PAD
+   ========================================================= */
+
+.custom .arrows {
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    left: 255px;
+    top: 320px;
+}
+
+.custom .arrow {
+    position: absolute;
+
+    width: 55px;
+    height: 55px;
+
+    opacity: 0;
+    background: transparent;
+
+    border-radius: 15px;
+}
+
+.custom .arrow.up {
+    left: 62px;
+    top: 0;
+}
+
+.custom .arrow.down {
+    left: 62px;
+    bottom: 0;
+}
+
+.custom .arrow.left {
+    left: 0;
+    top: 62px;
+}
+
+.custom .arrow.right {
+    right: 0;
+    top: 62px;
+}
+
+.custom .arrow.pressed {
+    opacity: .65;
+
+    background: radial-gradient(
+        circle,
+        #ff00cc,
+        rgba(255,0,204,.4),
+        transparent
+    );
+
+    box-shadow:
+        0 0 15px #ff00cc,
+        0 0 30px #ff00cc;
+}
+
+
+/* =========================================================
+   ABXY
+   ========================================================= */
+
+.custom .abxy {
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    left: 650px;
+    top: 170px;
+}
+
+.custom .button {
+    position: absolute;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    background: transparent;
+}
+
+.custom .a {
+    left: 67px;
+    top: 130px;
+}
+
+.custom .b {
+    right: 0;
+    top: 67px;
+}
+
+.custom .x {
+    left: 0;
+    top: 67px;
+}
+
+.custom .y {
+    left: 67px;
+    top: 0;
+}
+
+.custom .button.pressed {
+    opacity: .7;
+
+    background: radial-gradient(
+        circle,
+        #ffffff,
+        #ff00cc 35%,
+        #00ffff 75%,
+        transparent
+    );
+
+    box-shadow:
+        0 0 15px #ff00cc,
+        0 0 30px #00ffff,
+        inset 0 0 15px #ffffff;
+}
+
+
+/* =========================================================
+   ANALOG STICKS
+   ========================================================= */
+
+.custom .sticks {
+    position: absolute;
+
+    width: 430px;
+    height: 180px;
+
+    left: 285px;
+    top: 170px;
+}
+
+.custom .stick {
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    background: transparent;
+}
+
+.custom .stick.left {
+    left: 0;
+    top: 0;
+}
+
+.custom .stick.right {
+    right: 0;
+    bottom: 0;
+}
+
+.custom .stick.pressed {
+    opacity: .55;
+
+    background: radial-gradient(
+        circle,
+        #00ffff,
+        rgba(0,255,255,.35),
+        transparent
+    );
+
+    box-shadow:
+        0 0 18px #00ffff,
+        0 0 35px #ff00cc,
+        inset 0 0 15px #ffffff;
+}
+
+
+/* =========================================================
+   START / BACK
+   ========================================================= */
+
+.custom .back,
+.custom .start {
+    position: absolute;
+
+    width: 45px;
+    height: 30px;
+
+    opacity: 0;
+
+    background: transparent;
+}
+
+.custom .back {
+    left: 455px;
+    top: 285px;
+}
+
+.custom .start {
+    right: 455px;
+    top: 285px;
+}
+
+.custom .back.pressed,
+.custom .start.pressed {
+    opacity: .7;
+
+    background: #ff00cc;
+
+    box-shadow:
+        0 0 12px #ff00cc,
+        0 0 25px #00ffff;
+}
+
+
+/* =========================================================
+   GUIDE / HOME BUTTON
+   ========================================================= */
+
+.custom .quadrant {
+    opacity: 0;
+}
+
+
+/* =========================================================
+   CLEAN UP DEFAULT GPV ELEMENTS
+   ========================================================= */
+
+.custom .face {
+    opacity: 0;
+}
+
+.custom .paddle {
+    opacity: 0;
+}
