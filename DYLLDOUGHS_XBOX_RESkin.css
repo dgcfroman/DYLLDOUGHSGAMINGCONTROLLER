@@ -1,0 +1,258 @@
+/*
+  DYLLDOUGHS GAMING - Neon Xbox One GamePad Viewer Skin
+  Built on the official GamePad Viewer Xbox input DOM.
+  Artwork: 1536x1024 PNG, displayed at 750x500.
+*/
+.controller.custom {
+  width: 750px;
+  height: 500px;
+  margin: 0;
+  position: relative;
+  background: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png") no-repeat 0 0;
+  background-size: 750px 500px;
+  background-position: 0 0;
+  overflow: visible;
+}
+
+/* Keep the artwork visible even when GPV reports disconnected. */
+.custom.disconnected {
+  background: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png") no-repeat 0 0;
+  background-size: 750px 500px;
+}
+.custom.disconnected div { display:none; }
+
+/* Hide the stock visual sprites; the uploaded artwork supplies all visuals. */
+.custom .quadrant { display:none; }
+
+/* ---------------- TRIGGERS ---------------- */
+.custom .triggers {
+  position:absolute;
+  left:80px;
+  top:5px;
+  width:590px;
+  height:80px;
+  z-index:20;
+}
+.custom .trigger {
+  width:130px;
+  height:70px;
+  background:none;
+  opacity:0;
+  position:absolute;
+  top:0;
+  border-radius:35px;
+}
+.custom .trigger.left { left:0; float:none; }
+.custom .trigger.right { right:0; float:none; transform:none; }
+.custom .trigger.pressed {
+  opacity:1;
+  background:rgba(0,240,255,.10);
+  box-shadow:0 0 12px #00eaff, inset 0 0 10px #00eaff;
+}
+
+/* ---------------- BUMPERS ---------------- */
+.custom .bumpers {
+  position:absolute;
+  left:105px;
+  top:28px;
+  width:540px;
+  height:62px;
+  z-index:21;
+}
+.custom .bumper {
+  width:175px;
+  height:58px;
+  background:none;
+  opacity:0;
+  position:absolute;
+  top:0;
+  border-radius:28px;
+}
+.custom .bumper.left { left:0; float:none; }
+.custom .bumper.right { right:0; float:none; transform:none; }
+.custom .bumper.pressed {
+  opacity:1;
+  background:rgba(255,0,220,.10);
+  box-shadow:0 0 13px #ff00dc, inset 0 0 10px #ff00dc;
+}
+
+/* ---------------- BACK / START ---------------- */
+.custom .arrows {
+  position:absolute;
+  left:285px;
+  top:125px;
+  width:180px;
+  height:38px;
+  z-index:30;
+}
+.custom .back,
+.custom .start {
+  width:45px;
+  height:38px;
+  background:none;
+  opacity:0;
+  border-radius:18px;
+  position:absolute;
+  top:0;
+}
+.custom .back { left:0; float:none; }
+.custom .start { right:0; float:none; }
+.custom .back.pressed,
+.custom .start.pressed {
+  opacity:1;
+  background:rgba(0,240,255,.12);
+  box-shadow:0 0 12px #00eaff, inset 0 0 8px #00eaff;
+}
+
+/* ---------------- FACE BUTTONS ---------------- */
+.custom .abxy {
+  position:absolute;
+  left:493px;
+  top:65px;
+  width:160px;
+  height:155px;
+  z-index:40;
+}
+.custom .button {
+  position:absolute;
+  width:48px;
+  height:48px;
+  background:none;
+  opacity:0;
+  border-radius:50%;
+  box-sizing:border-box;
+}
+.custom .button::after {
+  content:"";
+  position:absolute;
+  inset:2px;
+  border:2px solid rgba(0,240,255,.95);
+  border-radius:50%;
+  box-shadow:0 0 8px #00eaff, inset 0 0 7px #00eaff;
+}
+.custom .button.pressed {
+  opacity:1;
+  transform:translateY(3px);
+}
+.custom .a { left:42px; top:100px; }
+.custom .b { right:0; top:55px; }
+.custom .x { left:0; top:55px; }
+.custom .y { left:42px; top:0; }
+.custom .button.pressed::after {
+  border-color:#ff00dc;
+  box-shadow:0 0 12px #ff00dc, inset 0 0 8px #ff00dc;
+}
+
+/* ---------------- ANALOG STICKS ---------------- */
+.custom .sticks {
+  position:absolute;
+  left:145px;
+  top:125px;
+  width:405px;
+  height:300px;
+  z-index:35;
+}
+.custom .stick {
+  position:absolute;
+  width:94px;
+  height:94px;
+  background:none;
+  opacity:1;
+  border-radius:50%;
+  box-sizing:border-box;
+}
+.custom .stick::after {
+  content:"";
+  position:absolute;
+  inset:3px;
+  border:3px solid #00eaff;
+  border-radius:50%;
+  box-shadow:0 0 10px #00eaff, inset 0 0 8px #00eaff;
+  opacity:.55;
+}
+.custom .stick.pressed::after {
+  border-color:#ff00dc;
+  box-shadow:0 0 15px #ff00dc, inset 0 0 10px #ff00dc;
+  opacity:1;
+}
+.custom .stick.left {
+  left:0;
+  top:0;
+}
+.custom .stick.right {
+  left:442px;
+  top:205px;
+}
+
+/* ---------------- D-PAD ---------------- */
+.custom .dpad {
+  position:absolute;
+  left:250px;
+  top:245px;
+  width:112px;
+  height:112px;
+  z-index:45;
+}
+.custom .face {
+  position:absolute;
+  background:none;
+  opacity:0;
+  box-sizing:border-box;
+}
+.custom .face.pressed {
+  opacity:1;
+}
+.custom .face::after {
+  content:"";
+  position:absolute;
+  border:3px solid #00eaff;
+  box-shadow:0 0 10px #00eaff, inset 0 0 8px #00eaff;
+  background:rgba(0,240,255,.08);
+}
+.custom .face.up,
+.custom .face.down {
+  width:34px;
+  height:56px;
+  left:39px;
+}
+.custom .face.up { top:0; }
+.custom .face.down { bottom:0; }
+.custom .face.up::after,
+.custom .face.down::after {
+  inset:0;
+  border-radius:15px 15px 5px 5px;
+}
+.custom .face.down::after {
+  border-radius:5px 5px 15px 15px;
+}
+.custom .face.left,
+.custom .face.right {
+  width:56px;
+  height:34px;
+  top:39px;
+}
+.custom .face.left { left:0; }
+.custom .face.right { right:0; }
+.custom .face.left::after,
+.custom .face.right::after {
+  inset:0;
+  border-radius:15px 5px 5px 15px;
+}
+.custom .face.right::after {
+  border-radius:5px 15px 15px 5px;
+}
+.custom .face.pressed::after {
+  border-color:#ff00dc;
+  box-shadow:0 0 13px #ff00dc, inset 0 0 9px #ff00dc;
+}
+
+/* Do not interfere with GPV's JavaScript stick transforms. */
+.custom .stick,
+.custom .trigger,
+.custom .button,
+.custom .face,
+.custom .bumper,
+.custom .back,
+.custom .start {
+  transition:none;
+}
