@@ -1,0 +1,52 @@
+/* DYLLDOUGHS GAMING — MEASURED FINAL ALIGNMENT
+   Base/artwork stays unchanged.
+   Native GPV Xbox One input logic stays unchanged.
+   Only the four shoulder indicators + D-pad are repositioned.
+*/
+
+.controller.xbox {
+    background: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/ChatGPT%20Image%20Sep%205%2C%202026%2C%2005_25_12%20PM.png") center center / 750px 630px no-repeat !important;
+    width: 750px !important;
+    height: 630px !important;
+}
+
+/* =========================
+   D-PAD
+   Current pressed center was ~18px too far right and ~6px too high.
+   ========================= */
+.xbox .dpad {
+    top: 303px !important;
+    left: 252px !important;
+}
+
+/* =========================
+   BUMPERS — LB / RB
+   Original: left 107px, top 129px.
+   Measured target: move the whole bumper row up ~25px.
+   ========================= */
+.xbox .bumpers {
+    left: 107px !important;
+    top: 104px !important;
+}
+
+/* =========================
+   TRIGGERS — LT / RT
+   Original trigger container sat at y=0, which is visibly above
+   the artwork's shoulder caps. Move the whole pair down ~75px.
+   Shift the pair slightly outward to match the two shoulder caps.
+   ========================= */
+.xbox .triggers {
+    left: 140px !important;
+    top: 75px !important;
+}
+
+/* Leave native trigger/bumber sizes and pressed-state behavior intact. */
+.xbox .trigger,
+.xbox .bumper {
+    opacity: 0;
+}
+
+.xbox .trigger.pressed,
+.xbox .bumper.pressed {
+    opacity: 1;
+}
