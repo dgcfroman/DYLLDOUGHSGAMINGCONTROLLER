@@ -101,3 +101,19 @@
 
 /* Do not modify triggers/bumpers until their pressed-state positions are tested.
    Their original GPV geometry remains active. */
+
+
+/* =========================================================
+   SHOULDER-ONLY FINAL PATCH
+   Reference: the supplied screenshot with the left shoulder
+   pressed. Both GPV shoulder groups move UP exactly 30px.
+   NOTHING ELSE IS CHANGED.
+   ========================================================= */
+
+.xbox .triggers {
+    top: -30px !important;
+}
+
+.xbox .bumpers {
+    top: 99px !important;
+}
