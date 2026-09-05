@@ -1,0 +1,46 @@
+/* DYLLDOUGHS GAMING — ALIGNED TO THE NEW XBOX-SHAPED BASE
+   Base image stays untouched. Native GPV controls are repositioned only.
+*/
+
+.controller.xbox {
+    background: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/ChatGPT%20Image%20Sep%205%2C%202026%2C%2005_25_12%20PM.png") center center / 750px 630px no-repeat !important;
+    width: 750px !important;
+    height: 630px !important;
+}
+
+/* Triggers / bumpers: leave GPV geometry unchanged for now. */
+
+/* Start / Back: artwork is already close; leave native geometry unchanged. */
+
+/* ABXY — match the printed buttons in the artwork. */
+.xbox .abxy {
+    top: 134px !important;
+    left: 494px !important;
+}
+
+/* Preserve native relative button arrangement, but the artwork's Y sits
+   higher than the stock Xbox position. */
+.xbox .a { top: 108px !important; left: 55px !important; }
+.xbox .b { top: 58px !important; right: 0 !important; }
+.xbox .x { top: 58px !important; left: 4px !important; }
+.xbox .y { top: 7px !important; left: 55px !important; }
+
+/* Sticks — artwork's wells are substantially higher than stock GPV Xbox. */
+.xbox .sticks {
+    top: 239px !important;
+    left: 144px !important;
+}
+.xbox .stick.left {
+    top: -70px !important;
+    left: 0 !important;
+}
+.xbox .stick.right {
+    top: 3px !important;
+    left: 294px !important;
+}
+
+/* D-pad is essentially in the correct native location on this base. */
+.xbox .dpad {
+    top: 345px !important;
+    left: 223px !important;
+}
