@@ -1,0 +1,21 @@
+/* DYLLDOUGHS GAMING — CLEAN RESTART
+   Xbox One GPV native skin + DYLLDOUGHS BASE ONLY.
+   DO NOT alter GPV controls, positions, or pressed-state logic.
+*/
+
+.controller.xbox {
+    background: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/ChatGPT%20Image%20Sep%205%2C%202026%2C%2005_25_12%20PM.png") center center / 750px 630px no-repeat !important;
+    height: 630px !important;
+    width: 750px !important;
+}
+
+.xbox.white {
+    background: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/ChatGPT%20Image%20Sep%205%2C%202026%2C%2005_25_12%20PM.png") center center / 750px 630px no-repeat !important;
+}
+
+.xbox.disconnected {
+    background: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/ChatGPT%20Image%20Sep%205%2C%202026%2C%2005_25_12%20PM.png") center center / 750px 630px no-repeat !important;
+}
+
+/* Everything below is intentionally NOT restyled.
+   GPV's native Xbox One CSS continues handling all inputs. */
