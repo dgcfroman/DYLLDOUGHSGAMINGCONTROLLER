@@ -1,0 +1,86 @@
+/* DYLLDOUGHS XBOX ONE - ARTWORK OVERLAY
+   Use with GamePad Viewer editcss= on the Xbox One skin.
+   IMPORTANT: preserve GPV's native controller/input elements.
+*/
+
+.controller.xbox {
+  position: relative !important;
+  width: 784px !important;
+  height: 558px !important;
+  background: transparent !important;
+}
+
+/* Artwork layer: uses the exact supplied 1536x1024 PNG, scaled to GPV's canvas. */
+.controller.xbox::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+  pointer-events: none !important;
+}
+
+/* Keep every GPV input element above the artwork, but invisible until pressed. */
+.controller.xbox > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Hide the stock visual artwork only. Do not remove DOM elements. */
+.controller.xbox .trigger,
+.controller.xbox .bumper,
+.controller.xbox .button,
+.controller.xbox .stick,
+.controller.xbox .face,
+.controller.xbox .back,
+.controller.xbox .start,
+.controller.xbox .quadrant {
+  background-image: none !important;
+}
+
+/* Stock button graphics/colors off; native elements remain clickable/live. */
+.controller.xbox .button,
+.controller.xbox .face,
+.controller.xbox .trigger,
+.controller.xbox .bumper,
+.controller.xbox .back,
+.controller.xbox .start {
+  opacity: 0 !important;
+}
+
+/* Native sticks remain in the DOM and retain GPV movement/state. */
+.controller.xbox .stick {
+  opacity: 0 !important;
+}
+
+/* Do not let GPV's stock group backgrounds cover the artwork. */
+.controller.xbox .triggers,
+.controller.xbox .bumpers,
+.controller.xbox .abxy,
+.controller.xbox .sticks,
+.controller.xbox .dpad,
+.controller.xbox .arrows {
+  background: transparent !important;
+}
+
+/* GPV pressed states: reveal a neon feedback glow without replacing input logic. */
+.controller.xbox .button.pressed,
+.controller.xbox .face.pressed,
+.controller.xbox .trigger.pressed,
+.controller.xbox .bumper.pressed,
+.controller.xbox .back.pressed,
+.controller.xbox .start.pressed {
+  opacity: 1 !important;
+  background: rgba(255, 0, 180, 0.55) !important;
+  box-shadow: 0 0 18px rgba(255, 0, 180, 0.95) !important;
+}
+
+/* Keep stick indicators subtle but visible while moved. */
+.controller.xbox .stick.pressed {
+  opacity: 1 !important;
+  background: rgba(0, 240, 255, 0.45) !important;
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.95) !important;
+}
