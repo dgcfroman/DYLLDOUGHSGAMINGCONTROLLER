@@ -4,8 +4,13 @@
 */
 
 .controller.custom {
-    width: 1536px;
-    height: 1024px;
+    width: 1536px !important;
+    height: 1024px !important;
+    min-width: 1536px !important;
+    min-height: 1024px !important;
+    max-width: none !important;
+    max-height: none !important;
+    overflow: visible !important;
     position: relative;
     margin: 0;
     background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png");
