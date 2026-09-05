@@ -1,0 +1,47 @@
+/* DYLLDOUGHS GAMING — XBOX ONE BASE + ALIGNMENT
+   ONLY replaces the GPV Xbox base and nudges native controls to the artwork.
+   GPV's original input/state CSS remains active.
+*/
+
+/* --- DYLLDOUGHS BASE --- */
+.controller.xbox {
+    background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/DYLLDOUGHS_XBOX_BASE_750x630.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 750px 630px !important;
+    width: 750px !important;
+    height: 630px !important;
+}
+
+/* --- BUTTONS ARE ALREADY ALIGNED; leave GPV's native ABXY positions alone --- */
+
+/* --- START / BACK are already aligned; leave them alone --- */
+
+/* --- STICKS ---
+   Artwork left stick is higher than GPV's stock Xbox position.
+   Artwork right stick is also higher.
+*/
+.xbox .sticks {
+    top: 239px;
+    left: 144px;
+}
+
+.xbox .stick.left {
+    top: -70px !important;
+    left: -14px !important;
+}
+
+.xbox .stick.right {
+    top: 43px !important;
+    left: 292px !important;
+}
+
+/* --- D-PAD ---
+   Move native GPV D-pad left and slightly down to the artwork's D-pad.
+*/
+.xbox .dpad {
+    top: 379px !important;
+    left: 164px !important;
+}
+
+/* --- Keep native GPV input visuals/states completely intact --- */
