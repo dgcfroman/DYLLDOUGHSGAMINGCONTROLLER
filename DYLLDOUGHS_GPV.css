@@ -1,124 +1,161 @@
-/*
-DYLLDOUGHS GAMING — Gamepad Viewer Controller Overlay
-The supplied controller artwork is embedded directly in this CSS.
+/* DYLLDOUGHS GAMING — Gamepad Viewer custom skin
+   Artwork: 1536 x 1024
+   Uses the exact PNG uploaded to the DYLLDOUGHSGAMINGCONTROLLER repo.
 */
 
 .controller.custom {
-  position: relative;
-  width: 1536px;
-  height: 1024px;
-  margin: 0;
-  background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% 100%;
-  overflow: visible;
+    width: 1536px;
+    height: 1024px;
+    position: relative;
+    margin: 0;
+    background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 1536px 1024px;
 }
 
+/* Keep only the custom artwork visible when disconnected. */
 .custom.disconnected {
-  background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png");
+    background-image: url("https://dgcfroman.github.io/DYLLDOUGHSGAMINGCONTROLLER/Neon%20Cyberpunk%20DyllDoughs%20Gamepad%20Overlay.png");
 }
-.custom.disconnected > div { display:none; }
+.custom.disconnected > div {
+    display: none;
+}
 
-/* Triggers */
+/* Input layers are transparent until pressed. */
 .custom .triggers {
-  position:absolute; left:0; top:0; width:1536px; height:170px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1536px;
+    height: 150px;
 }
 .custom .trigger {
-  position:absolute; top:0; width:390px; height:165px;
-  opacity:0; background:transparent; border-radius:80px;
+    opacity: 0;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    width: 500px;
+    height: 150px;
 }
-.custom .trigger.left { left:80px; }
-.custom .trigger.right { right:80px; }
+.custom .trigger.left { left: 120px; }
+.custom .trigger.right { right: 120px; }
 .custom .trigger.pressed {
-  opacity:.34;
-  background:radial-gradient(ellipse,rgba(0,255,255,.85),rgba(255,0,204,.3) 55%,transparent 75%);
-  box-shadow:0 0 25px rgba(0,255,255,.9),inset 0 0 30px rgba(255,0,204,.55);
+    opacity: .35;
+    background: radial-gradient(ellipse, rgba(255,0,204,.75), rgba(0,255,255,.25) 65%, transparent 78%);
+    box-shadow: 0 0 25px rgba(255,0,204,.9), inset 0 0 25px rgba(0,255,255,.55);
 }
 
-/* Bumpers */
 .custom .bumpers {
-  position:absolute; left:0; top:0; width:1536px; height:150px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 1536px;
+    height: 100px;
 }
 .custom .bumper {
-  position:absolute; top:30px; width:360px; height:75px;
-  opacity:0; background:transparent; border-radius:40px;
+    opacity: 0;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    width: 470px;
+    height: 85px;
 }
-.custom .bumper.left { left:130px; }
-.custom .bumper.right { right:130px; }
+.custom .bumper.left { left: 125px; }
+.custom .bumper.right { right: 125px; }
 .custom .bumper.pressed {
-  opacity:.45;
-  background:linear-gradient(90deg,rgba(0,255,255,.8),rgba(255,0,204,.5));
-  box-shadow:0 0 25px rgba(0,255,255,.9),inset 0 0 18px rgba(255,0,204,.65);
+    opacity: .38;
+    background: linear-gradient(90deg, rgba(0,255,255,.7), rgba(255,0,204,.7));
+    box-shadow: 0 0 25px rgba(0,255,255,.8), inset 0 0 20px rgba(255,0,204,.55);
 }
 
-/* D-pad */
+/* D-pad — artwork is already present in the PNG. */
 .custom .arrows {
-  position:absolute; left:515px; top:430px; width:270px; height:230px;
+    position: absolute;
+    left: 500px;
+    top: 400px;
+    width: 300px;
+    height: 240px;
 }
 .custom .arrow {
-  position:absolute; opacity:0; background:transparent; border-radius:20px;
+    position: absolute;
+    opacity: 0;
+    background: transparent;
 }
-.custom .arrow.up,.custom .arrow.down {
-  left:82px; width:105px; height:85px;
+.custom .arrow.up,
+.custom .arrow.down {
+    left: 95px;
+    width: 110px;
+    height: 85px;
 }
-.custom .arrow.left,.custom .arrow.right {
-  top:65px; width:90px; height:105px;
+.custom .arrow.left,
+.custom .arrow.right {
+    top: 75px;
+    width: 95px;
+    height: 95px;
 }
-.custom .arrow.up { top:0; }
-.custom .arrow.down { bottom:0; }
-.custom .arrow.left { left:0; }
-.custom .arrow.right { right:0; }
+.custom .arrow.up { top: 0; }
+.custom .arrow.down { bottom: 0; }
+.custom .arrow.left { left: 0; }
+.custom .arrow.right { right: 0; }
 .custom .arrow.pressed {
-  opacity:.5;
-  background:radial-gradient(circle,rgba(255,0,204,.95),rgba(0,255,255,.3) 65%,transparent 78%);
-  box-shadow:0 0 22px rgba(255,0,204,.95);
+    opacity: .45;
+    background: radial-gradient(circle, rgba(255,0,204,.85), rgba(0,255,255,.25) 65%, transparent 80%);
+    box-shadow: 0 0 25px rgba(255,0,204,.85);
 }
 
 /* ABXY */
 .custom .abxy {
-  position:absolute; left:990px; top:105px; width:310px; height:350px;
+    position: absolute;
+    left: 1010px;
+    top: 120px;
+    width: 330px;
+    height: 340px;
 }
 .custom .button {
-  position:absolute; width:105px; height:105px;
-  opacity:0; border-radius:50%; background:transparent;
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    opacity: 0;
+    border-radius: 50%;
+    background: transparent;
 }
-.custom .button.y { left:120px; top:0; }
-.custom .button.x { left:0; top:110px; }
-.custom .button.b { right:0; top:110px; }
-.custom .button.a { left:120px; bottom:0; }
+.custom .button.y { left: 112px; top: 0; }
+.custom .button.x { left: 0; top: 112px; }
+.custom .button.b { right: 0; top: 112px; }
+.custom .button.a { left: 112px; bottom: 0; }
 .custom .button.pressed {
-  opacity:.58;
-  background:radial-gradient(circle,rgba(255,255,255,.35),rgba(255,0,204,.65) 45%,rgba(0,255,255,.2) 72%,transparent 78%);
-  box-shadow:0 0 18px rgba(255,0,204,.95),0 0 38px rgba(0,255,255,.75),inset 0 0 18px rgba(255,255,255,.8);
+    opacity: .5;
+    background: radial-gradient(circle, rgba(255,255,255,.35), rgba(255,0,204,.65) 42%, rgba(0,255,255,.2) 72%, transparent 80%);
+    box-shadow: 0 0 20px rgba(255,0,204,.95), 0 0 35px rgba(0,255,255,.7);
 }
 
 /* Sticks */
 .custom .sticks {
-  position:absolute; left:0; top:0; width:1536px; height:1024px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1536px;
+    height: 1024px;
 }
 .custom .stick {
-  position:absolute; width:150px; height:150px; margin:0;
-  border-radius:50%; opacity:0; background:transparent;
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    opacity: 0;
+    border-radius: 50%;
+    background: transparent;
 }
-.custom .stick.left { left:325px; top:205px; }
-.custom .stick.right { left:890px; top:390px; }
+.custom .stick.left { left: 300px; top: 185px; }
+.custom .stick.right { left: 850px; top: 390px; }
 .custom .stick.pressed {
-  opacity:.55;
-  background:radial-gradient(circle,rgba(0,255,255,.65),rgba(255,0,204,.35) 58%,transparent 75%);
-  box-shadow:0 0 20px rgba(0,255,255,.9),0 0 45px rgba(255,0,204,.75),inset 0 0 20px rgba(255,255,255,.65);
+    opacity: .45;
+    background: radial-gradient(circle, rgba(0,255,255,.7), rgba(255,0,204,.3) 60%, transparent 78%);
+    box-shadow: 0 0 22px rgba(0,255,255,.9), 0 0 38px rgba(255,0,204,.65);
 }
 
-/* Hide built-in artwork layers so the supplied image is the visual base. */
+/* Hide GPV's built-in visible artwork; our PNG is the artwork layer. */
 .custom .quadrant,
-.custom .face,
-.custom .start,
-.custom .back { opacity:0; }
-
-.custom .button.pressed,
-.custom .bumper.pressed,
-.custom .trigger.pressed,
-.custom .arrow.pressed,
-.custom .stick.pressed {
-  transition:opacity .04s linear,box-shadow .04s linear;
+.custom .face {
+    opacity: 0;
 }
